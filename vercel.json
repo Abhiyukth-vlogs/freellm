@@ -4,29 +4,10 @@
     "client": {
       "root": "client",
       "framework": "vite",
+      "installCommand": "npm install",
       "buildCommand": "npm run build",
-    "bindings": [
-      { "type": "service", "service": "server", "format": "url", "env": "SERVER_URL" }
-    ],
       "outputDirectory": "dist",
-      "env": {
-    "CLOUDFLARE_KEY": "@CLOUDFLARE_KEY",
-    "EXA_KEY": "@EXA_KEY",
-    "GOOGLE_KEY": "@GOOGLE_KEY",
-    "GROQ_KEY": "@GROQ_KEY",
-    "HUGGINGFACE_KEY": "@HUGGINGFACE_KEY",
-    "LLMTR_KEY": "@LLMTR_KEY",
-    "NVIDIA_KEY": "@NVIDIA_KEY",
-    "OPENROUTER_KEY": "@OPENROUTER_KEY",
-    "ORCAROUTER_KEY": "@ORCAROUTER_KEY",
-    "PARALLEL_KEY": "@PARALLEL_KEY",
-    "ROUTEWAY_KEY": "@ROUTEWAY_KEY",
-    "SIMPLELLM_KEY": "@SIMPLELLM_KEY",
-    "SPEECHIFY_KEY": "@SPEECHIFY_KEY",
-    "TAVILY_KEY": "@TAVILY_KEY",
-    "XKIRO_KEY": "@XKIRO_KEY"
-  },
-  "rewrites": [
+      "rewrites": [
         {
           "source": "/(.*)",
           "destination": "/index.html"
@@ -36,10 +17,30 @@
     "server": {
       "root": "server",
       "framework": "express",
-      "buildCommand": "npm run build"
+      "installCommand": "npm install",
+      "buildCommand": "npm run build",
+      "env": {
+        "ENCRYPTION_KEY": "@ENCRYPTION_KEY",
+        "CLOUDFLARE_KEY": "@CLOUDFLARE_KEY",
+        "EXA_KEY": "@EXA_KEY",
+        "GOOGLE_KEY": "@GOOGLE_KEY",
+        "GROQ_KEY": "@GROQ_KEY",
+        "HUGGINGFACE_KEY": "@HUGGINGFACE_KEY",
+        "LLMTR_KEY": "@LLMTR_KEY",
+        "NVIDIA_KEY": "@NVIDIA_KEY",
+        "OPENROUTER_KEY": "@OPENROUTER_KEY",
+        "ORCAROUTER_KEY": "@ORCAROUTER_KEY",
+        "PARALLEL_KEY": "@PARALLEL_KEY",
+        "ROUTEWAY_KEY": "@ROUTEWAY_KEY",
+        "SIMPLELLM_KEY": "@SIMPLELLM_KEY",
+        "SPEECHIFY_KEY": "@SPEECHIFY_KEY",
+        "TAVILY_KEY": "@TAVILY_KEY",
+        "XKIRO_KEY": "@XKIRO_KEY"
+      }
     }
   },
   "env": {
+    "ENCRYPTION_KEY": "@ENCRYPTION_KEY",
     "CLOUDFLARE_KEY": "@CLOUDFLARE_KEY",
     "EXA_KEY": "@EXA_KEY",
     "GOOGLE_KEY": "@GOOGLE_KEY",
