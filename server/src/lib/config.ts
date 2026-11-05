@@ -91,7 +91,7 @@ export function loadConfig(): Config {
     proxyRateLimitRpm: parseRateLimitRpm(),
     requestBodyLimitBytes: parseRequestBodyLimitBytes(),
     nodeEnv: process.env.NODE_ENV ?? 'development',
-    serveStaticAssets: true,
+    serveStaticAssets: process.env.SERVE_STATIC_ASSETS !== 'false',
     trustProxy: parseTrustProxy(),
     // CSP_UPGRADE_INSECURE_REQUESTS: true|false forces the directive on/off;
     // unset (the default) leaves it on auto — emit only when the request is
